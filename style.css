@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500&display=swap');
+
+:root {
+    --main-bg-black: #000;
+    --main-bg-black-secondary: #171717;
+    --main-bg-white: #dfd3c3;
+    --main-bg-gold: #e9b171;
+    --main-bg-salmon: #fa8072;
+    --vh: 9.29px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    text-shadow: rgb(0 0 0 / 0%) 0 0 1px;
+    vertical-align: baseline;
+    background-clip: border-box;
+    word-break: break-word;
+}
+
+img {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-bg-white);
+    cursor: pointer;
+    cursor: hand;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+}
+
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+    background: none;
+    border: 0;
+    overflow: visible;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+::selection {
+    background: var(--main-bg-white);
+    color: var(--main-bg-black);
+    text-shadow: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+    background: var(--main-bg-white);
+}
+
+::-webkit-scrollbar-track {
+    width: 8px;
+    background: #0c0c0c;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    opacity: 1;
+    width: 8px;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    color: var(--main-bg-white);
+    -moz-block-height: normal;
+    line-height: 1.25;
+    letter-spacing: -0.32px;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: var(--main-bg-black);
+    word-break: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Merriweather", 'Constantia', 'Lucida Bright', 'Lucidabright', 'Lucida Serif', 'Lucida', 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', 'Georgia', 'serif';
+    font-weight: 500;
+}
+
+h1,
+h2 {
+    font-weight: 400;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    caret-color: var(--main-bg-white);
+    border: solid 1px var(--main-bg-white);
+    color: var(--main-bg-white);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.28px;
+    background-color: #1e1e1e;
+    padding: 28px 36px;
+    word-break: normal;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+}
+
+
+
+/* CSS CHALLENGE */
+#app {
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#app h3#todo-subtitle {
+    margin-bottom: 24px;
+}
+
+#app :where(h1#todo-title, h3#todo-subtitle) {
+    width: 100%;
+    text-align: center;
+}
+
+h1#todo-title {
+    margin-bottom: 8px;
+}
+
+input#todo-input {
+    flex: 1;
+}
+
+button#todo-submit {
+    flex-basis: 120px;
+    background-color: var(--main-bg-white);
+    color: var(--main-bg-black);
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+ul#todo-output {
+    width: 100%;
+    margin: 32px 0px;
+    padding-left: 18px;
+}
+
+ul#todo-output li:not(:last-child) {
+    margin-bottom: 16px;
+}
